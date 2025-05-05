@@ -12,6 +12,12 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
 from collections import Counter
 
+st.set_page_config(
+    page_title="Judul Halaman",
+    page_icon="📊",
+    layout="wide"
+)
+
 # Download NLTK resources
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -116,9 +122,6 @@ def preprocess_text(text):
     tokens = filteringText(tokens)
     text = toSentence(tokens)
     return text
-
-# Ini harus menjadi perintah Streamlit pertama di skrip Anda
-st.set_page_config(page_title="Sentiment Analysis App", layout="centered")
 
 # Modern UI Styling
 st.markdown("""
